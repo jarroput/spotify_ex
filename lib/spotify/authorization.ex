@@ -15,7 +15,7 @@ defmodule Spotify.Authorization do
     "https://accounts.spotify.com/authorize?client_id=#{Spotify.client_id}&response_type=code&redirect_uri=#{Spotify.callback_url}"
   end
 
-  def scopes do
+  defp scopes do
     Application.get_env(:spotify_ex, :scopes)
      |> Enum.join(" ")
      |> URI.encode
