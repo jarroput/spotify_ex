@@ -22,7 +22,7 @@ defmodule Spotify.Mixfile do
   end
   defp description do
     """
-    An Elixir wrapper for Spotify API O-Auth.
+    An Elixir wrapper for Spotify API.
     """
   end
 
@@ -30,7 +30,7 @@ defmodule Spotify.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpoison, :poison, :plug]]
+    [applications: [:logger, :httpoison, :poison]]
   end
 
   # Dependencies can be Hex packages:
@@ -45,8 +45,7 @@ defmodule Spotify.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.8.0"},
-      {:poison, "~> 1.5"},
-      {:plug, "~> 1.0"}
+      {:poison, "~> 1.5"}
     ]
   end
 end
