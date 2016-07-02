@@ -14,7 +14,8 @@ defmodule Spotify do
   def headers do
     [
       {"Authorization", "Basic #{encoded_credentials}"},
-      {"Content-Type", "application/x-www-form-urlencoded"}
+      {"Content-Type", "application/x-www-form-urlencoded"},
+      {"User-agent", "Spotify_ex"}
     ]
   end
 

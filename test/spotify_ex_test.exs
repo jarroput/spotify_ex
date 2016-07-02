@@ -21,7 +21,8 @@ defmodule SpotifyTest do
   test "#headers" do
     headers = [
       {"Authorization", "Basic #{Spotify.encoded_credentials}"},
-      {"Content-Type", "application/x-www-form-urlencoded"}
+      {"Content-Type", "application/x-www-form-urlencoded"},
+      {"User-agent", "Spotify_ex"}
     ]
 
     assert(Spotify.headers == headers)
